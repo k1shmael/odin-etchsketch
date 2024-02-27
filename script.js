@@ -1,29 +1,25 @@
 /// Selects the container to put divs in
-const container = document.querySelector('#gridContainer')
-
-
-
+var divContainer = document.getElementById("gridContainer");
 
 /// function to create divs
 function createDivs(numDivs) {
+  for (var i = 0; i < numDivs; i++) {
+    let newDiv = document.createElement("div");
+    newDiv.classList.add("grid");
 
-    var parentElement = document.getElementById("gridContainer");
-
-   
-    for (var i = 0; i < numDivs; i++) {
-       
-        var newDiv = document.createElement("div");
-
-        
-       
-
-        
-        parentElement.appendChild(newDiv);
-    }
+    divContainer.appendChild(newDiv);
+  }
 }
 
- 
-createDivs(7);
+createDivs(32);
+
+
+
+
+
+///Button to change amount of divs in the grid
+
+let change = document.getElementById("change");
 
 
 
@@ -31,14 +27,6 @@ createDivs(7);
 
 
 
-
-
-
-
-
-
-
-
-
-
+let gridItems = document.getElementsByClassName('grid');
+gridItems.addEventlistener();
 
